@@ -12,6 +12,52 @@ export default function Projects() {
       label: 'Venture Capital, Fintech', 
       slug: 'bdc-mars-fintech-2016' 
     },
+
+    { 
+      id: 2, 
+      title: 'BMW Canada', 
+      subtitle: 'Brand Story', 
+      image: '/images/Fitting in Running at Work.mp4.00_00_25_26.Still002.jpg', 
+      label: 'People, Brand, ', 
+      slug: 'bmw-canada, brand-story' 
+    },
+
+    { 
+      id: 3, 
+      title: 'Specialized Bikes', 
+      subtitle: 'Brand Story', 
+      image: '/images/128A7910.00_00_39_06.Still002.jpg', 
+      label: 'Athlete, Product, Brand, ', 
+      slug: 'specialized-bikes, brand-story, athlete, product' 
+    },
+
+    { 
+      id: 4, 
+      title: 'PTC', 
+      subtitle: 'Enterprise Innovation', 
+      image: '/images/128A7910.00_01_09_18.Still006.jpg', 
+      label: 'Software, Innovation, IoT, ', 
+      slug: 'enterprise, product-story, software, IoT' 
+    },
+
+    { 
+      id: 5, 
+      title: 'IBM', 
+      subtitle: 'Global Entrepreneur Program', 
+      image: '/images/3S3A8091.jpg', 
+      label: 'Growth, Innovation, Transformation, ', 
+      slug: 'cloud, product-story, software, data' 
+    },
+
+    { 
+      id: 6, 
+      title: 'KPMG', 
+      subtitle: 'Consumer Markets, Growth Financing, Technology', 
+      image: '/images/_98A9573.jpg', 
+      label: 'Consulting, Innovation, Transformation, ', 
+      slug: 'consulting, financial services, consumer markets, data' 
+    },
+
     // Add more projects here as needed (e.g., healthcare, financial services, sports projects)
   ];
 
