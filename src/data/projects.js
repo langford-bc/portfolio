@@ -9,6 +9,58 @@ export const projects = [
     slug: 'bdc-mars-fintech-2016',
     netlifyUrl: 'https://bright-frangipane-ea14e9.netlify.app/' // Add Netlify URL for this project
   },
+
+  { 
+    id: 2, 
+    title: 'BMW Canada', 
+    subtitle: 'Brand Story', 
+    image: '/images/bmw_running.jpg', 
+    label: 'People, Culture, Brand', 
+    slug: 'bmw-running-at-work',
+    netlifyUrl: 'https://sparkly-unicorn-e9afeb.netlify.app/' // Add Netlify URL for this project
+  },
+
+  { 
+    id: 3, 
+    title: 'Specialized Bikes', 
+    subtitle: 'Brand Story', 
+    image: '/images/specialized_evan.jpg', 
+    label: 'Athlete, Product, Brand', 
+    slug: 'specialized-crux-launch',
+    netlifyUrl: 'https://fancy-fairy-e5b92f.netlify.app/' // Add Netlify URL for this project
+  },
+
+  { 
+    id: 4, 
+    title: 'PTC', 
+    subtitle: 'Enterprise Innovation', 
+    image: '/images/ptc_liveworx.jpg', 
+    label: 'IoT, Innovation, Market Growth', 
+    slug: 'ptc-at-center-of-IoT',
+    netlifyUrl: 'https://helpful-lamington-757197.netlify.app/' // Add Netlify URL for this project
+  },
+
+  { 
+    id: 5, 
+    title: 'IBM', 
+    subtitle: 'Global Entrepreneur Program', 
+    image: '/images/ibm_gep.jpg', 
+    label: 'Growth, Innovation, Transformation', 
+    slug: 'ibm-innovation-at-scale',
+    netlifyUrl: 'https://legendary-raindrop-aa9359.netlify.app/' // Add Netlify URL for this project
+  },
+
+  { 
+    id: 6, 
+    title: 'KPMG', 
+    subtitle: 'Consumer Markets, Engergy, Technology', 
+    image: '/images/kpmg_mtm.jpg', 
+    label: 'Innovation, Transformation, Growth', 
+    slug: 'kpmg-transformational-partnerships-growth',
+    netlifyUrl: 'https://nimble-snickerdoodle-30c443.netlify.app/' // Add Netlify URL for this project
+  },
+
+
   // Add more projects here with their Netlify URLs as needed, e.g.:
   // { 
   //   id: 2, 
