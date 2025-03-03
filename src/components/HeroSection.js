@@ -1,5 +1,6 @@
-import Image from 'next/image';
 /*
+import Image from 'next/image';
+
 export default function HeroSection() {
   return (
     <section className="hero">
@@ -21,6 +22,9 @@ export default function HeroSection() {
   );
 }
   */
+
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function HeroSection() {
   return (
