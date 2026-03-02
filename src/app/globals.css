@@ -1,22 +1,70 @@
-/* src/app/globals.css */
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+  --brand-black: #000000;
+  --brand-offblack: #111111;
+  --brand-gray-light: #f5f5f7;
+  --brand-gray-mid: #86868b;
+  --brand-gray-dark: #1d1d1f;
+  --brand-white: #ffffff;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased font-sans selection:bg-brand-black selection:text-brand-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-sans font-medium tracking-tight text-brand-black;
+  }
+
+  p {
+    @apply leading-relaxed text-brand-gray-dark;
+  }
+
+  a {
+    @apply transition-colors duration-200 ease-in-out;
+  }
 }
 
-* {
-  box-sizing: border-box;
+@layer components {
+  .container-wide {
+    @apply max-w-8xl mx-auto px-6 md:px-12 lg:px-18;
+  }
+
+  .grid-12 {
+    @apply grid grid-cols-4 md:grid-cols-12 gap-x-6 gap-y-12;
+  }
+
+  .cinematic-pacing {
+    @apply py-24 md:py-30 lg:py-40;
+  }
+
+  .btn-primary {
+    @apply inline-block px-8 py-4 bg-brand-black text-white text-sm uppercase tracking-widest font-semibold hover:bg-brand-gray-dark transition-all duration-300;
+  }
+
+  .btn-secondary {
+    @apply inline-block px-8 py-4 border border-brand-black text-brand-black text-sm uppercase tracking-widest font-semibold hover:bg-brand-black hover:text-white transition-all duration-300;
+  }
+}
+
+/* Custom transitions for a more "exceptional" feel */
+.reveal-text {
+  animation: reveal 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

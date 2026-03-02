@@ -3,128 +3,85 @@ export const projects = [
   { 
     id: 1, 
     title: 'BDC Mars Fintech 2016', 
-    subtitle: 'Live Event Content', 
+    subtitle: 'Live Event Content Strategy',
     image: '/images/portfolio_mars_fintech_2016_test.jpg', 
-    label: 'Venture Capital, Fintech', 
+    category: 'Venture Capital, Fintech',
     slug: 'bdc-mars-fintech-2016',
-    netlifyUrl: 'https://bright-frangipane-ea14e9.netlify.app/' // Add Netlify URL for this project
+    client: 'BDC IT Venture Fund & MaRS FinTech',
+    year: '2016',
+    role: 'Content Director',
+    challenge: "Government agencies often struggle to connect effectively with the dynamic startup ecosystem. This was the challenge faced by BDC, a crucial player in Canada's economic growth, at the 2016 Canadian FinTech Summit. Our goal was to shift perceptions and demonstrate BDC's active and influential role in fostering the burgeoning Fintech sector.",
+    strategy: "We recognized that simply sponsoring an event wasn't enough. We integrated BDC into the core conversation, moving beyond passive sponsorship to position them as a thought leader. We showcased their deep domain expertise and commitment to supporting innovative startups through a series of high-impact visual narratives and live storytelling.",
+    result: "The project successfully bridged the gap between BDC and the startup community. It reinforced BDC's credibility with venture capital investors and stakeholders, demonstrating their strategic vision and commitment to the ecosystem in a way that was both authoritative and culturally resonant."
   },
-
   { 
     id: 2, 
     title: 'BMW Canada', 
-    subtitle: 'Brand Story', 
+    subtitle: 'Brand Story & Culture',
     image: '/images/bmw_running.jpg', 
-    label: 'People, Culture, Brand', 
+    category: 'People, Culture, Brand',
     slug: 'bmw-running-at-work',
-    netlifyUrl: 'https://sparkly-unicorn-e9afeb.netlify.app/' // Add Netlify URL for this project
+    client: 'BMW Canada',
+    year: '2018',
+    role: 'Creative Lead',
+    challenge: "BMW Canada wanted to showcase the human element behind their high-performance brand, focusing on internal culture and the concept of 'running at work' as a metaphor for efficiency and passion.",
+    strategy: "Instead of focusing on the cars, we focused on the people. We captured the kinetic energy of the workplace, using cinematic, candid visuals to document the drive and dedication of the team.",
+    result: "The campaign created a powerful internal narrative that resonated externally, humanizing the brand and reinforcing BMW's reputation as a company driven by passionate individuals."
   },
-
   { 
     id: 3, 
     title: 'Specialized Bikes', 
-    subtitle: 'Brand Story', 
+    subtitle: 'Brand Story & Product Launch',
     image: '/images/specialized_evan.jpg', 
-    label: 'Athlete, Product, Brand', 
+    category: 'Athlete, Product, Brand',
     slug: 'specialized-crux-launch',
-    netlifyUrl: 'https://fancy-fairy-e5b92f.netlify.app/' // Add Netlify URL for this project
+    client: 'Specialized Bikes',
+    year: '2019',
+    role: 'Strategic Storyteller',
+    challenge: "Launching the Specialized Crux required a narrative that balanced high-performance specs with the visceral experience of athlete-driven testing.",
+    strategy: "We focused on the intersection of athlete and machine, capturing the raw, unedited moments of testing in challenging environments to build authenticity.",
+    result: "The launch exceeded engagement targets, establishing the Crux as a leader in its category and strengthening the brand's connection to the core cycling community."
   },
-
   { 
     id: 4, 
     title: 'PTC', 
     subtitle: 'Enterprise Innovation', 
     image: '/images/ptc_liveworx.jpg', 
-    label: 'IoT, Innovation, Market Growth', 
+    category: 'IoT, Innovation, Market Growth',
     slug: 'ptc-at-center-of-IoT',
-    netlifyUrl: 'https://helpful-lamington-757197.netlify.app/' // Add Netlify URL for this project
+    client: 'PTC',
+    year: '2017',
+    role: 'Content Director',
+    challenge: "PTC needed to communicate its transition to an IoT-centric company at the LiveWorx event, making complex technology accessible and visionary.",
+    strategy: "We developed a series of immersive content pieces that visualized the digital thread across industries, emphasizing the real-world impact of IoT on innovation.",
+    result: "The content helped drive record attendance and participation, positioning PTC as the clear leader at the center of the industrial IoT revolution."
   },
-
   { 
     id: 5, 
     title: 'IBM', 
     subtitle: 'Global Entrepreneur Program', 
-    image: '/images/ibm_gep.jpg', 
-    label: 'Growth, Innovation, Transformation', 
+    image: '/images/ibm_gep.JPG',
+    category: 'Growth, Innovation, Transformation',
     slug: 'ibm-innovation-at-scale',
-    netlifyUrl: 'https://legendary-raindrop-aa9359.netlify.app/' // Add Netlify URL for this project
+    client: 'IBM',
+    year: '2015',
+    role: 'Creative Strategist',
+    challenge: "The IBM Global Entrepreneur Program needed to show it was more than just a provider of cloud credits—it needed to prove it was a partner in scaling innovation.",
+    strategy: "We highlighted the success stories of startups that transformed their industries using IBM's technology, focusing on the human impact of their innovations.",
+    result: "The program saw a significant uptick in quality applications and strengthened IBM's reputation as a supporter of the global startup ecosystem."
   },
-
   { 
     id: 6, 
     title: 'KPMG', 
-    subtitle: 'Consumer Markets, Engergy, Technology', 
+    subtitle: 'Transformational Partnerships',
     image: '/images/kpmg_mtm.jpg', 
-    label: 'Innovation, Transformation, Growth', 
+    category: 'Innovation, Transformation, Growth',
     slug: 'kpmg-transformational-partnerships-growth',
-    netlifyUrl: 'https://nimble-snickerdoodle-30c443.netlify.app/' // Add Netlify URL for this project
+    client: 'KPMG',
+    year: '2020',
+    role: 'Content Strategist',
+    challenge: "KPMG wanted to demonstrate its role in facilitating large-scale digital transformations across diverse sectors like energy and tech.",
+    strategy: "We focused on the strategic partnership between KPMG and its clients, emphasizing the qualitative shifts in culture and operational efficiency.",
+    result: "The narratives successfully communicated KPMG's value proposition to C-suite decision-makers, leading to increased interest in their transformation services."
   },
-
-
-  // Add more projects here with their Netlify URLs as needed, e.g.:
-  // { 
-  //   id: 2, 
-  //   title: 'Another Project', 
-  //   subtitle: 'Another Event', 
-  //   image: '/images/another-project.jpg', 
-  //   label: 'Category, Tag', 
-  //   slug: 'another-project',
-  //   netlifyUrl: 'https://your-netlify-site/another-project.html'
-  // }
 ];
-
-  
-
-/*
-// src/data/projects.js
-export const projects = [
-    { 
-      id: 1, 
-      title: 'BDC Mars Fintech 2016', 
-      subtitle: 'Live Event Content', 
-      image: '/images/portfolio_mars_fintech_2016_test.jpg', 
-      label: 'Venture Capital, Fintech', 
-      slug: 'bdc-mars-fintech-2016',
-      description: `
-        <h2>Project Title: Elevating BDC's Voice in the Canadian Fintech Ecosystem</h2>
-        <h3>Client: BDC IT Venture Fund & MaRS FinTech (Canadian FinTech Summit 2016)</h3>
-        <h4>Challenge:</h4>
-        <p>Government agencies often struggle to connect effectively with the dynamic startup ecosystem. This was the challenge faced by BDC, a crucial player in Canada's economic growth, at the 2016 Canadian FinTech Summit. Our goal was to shift perceptions and demonstrate BDC's active and influential role in fostering the burgeoning Fintech sector.</p>
-        <h4>Strategy:</h4>
-        <ul>
-          <li>Integrate BDC into the Core Conversation: Move beyond passive sponsorship and actively position BDC as a thought leader and key contributor to the Fintech dialogue.</li>
-          <li>Highlight BDC's Domain Expertise: Showcase BDC's deep understanding of the Fintech landscape and its commitment to supporting innovative startups.</li>
-          <li>Build Confidence and Trust: Reinforce BDC's credibility with venture capital investors and other stakeholders by demonstrating their strategic vision and commitment to the ecosystem.</li>
-        </ul>
-      `
-    },
-    // Add more projects here as needed
-  ];
-
-*/
-
-/*
-// src/data/projects.js
-export const projects = [
-    { 
-      id: 1, 
-      title: 'BDC Mars Fintech 2016', 
-      subtitle: 'Live Event Content', 
-      image: '/images/portfolio_mars_fintech_2016_test.jpg', 
-      label: 'Venture Capital, Fintech', 
-      slug: 'bdc-mars-fintech-2016',
-      description: `
-        **Project Title:** Elevating BDC's Voice in the Canadian Fintech Ecosystem  
-        **Client:** BDC IT Venture Fund & MaRS FinTech (Canadian FinTech Summit 2016)  
-        **Challenge:**  
-        Government agencies often struggle to connect effectively with the dynamic startup ecosystem. This was the challenge faced by BDC, a crucial player in Canada's economic growth, at the 2016 Canadian FinTech Summit. Our goal was to shift perceptions and demonstrate BDC's active and influential role in fostering the burgeoning Fintech sector.  
-        **Strategy:**  
-        We recognized that simply sponsoring an event wasn't enough. To truly make an impact, we needed to:  
-        - Integrate BDC into the Core Conversation: Move beyond passive sponsorship and actively position BDC as a thought leader and key contributor to the Fintech dialogue.  
-        - Highlight BDC's Domain Expertise: Showcase BDC's deep understanding of the Fintech landscape and its commitment to supporting innovative startups.  
-        - Build Confidence and Trust: Reinforce BDC's credibility with venture capital investors and other stakeholders by demonstrating their strategic vision and commitment to the ecosystem.
-      `
-    },
-    // Add more projects here as needed
-  ];
-  */
