@@ -1,35 +1,58 @@
+// src/components/AboutMe.js
+import Link from 'next/link';
+
 export default function AboutMe() {
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto px-4 max-w-4xl">
-        <h2 className="text-3xl font-bold mb-6 text-center">About Me</h2>
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          {/* Optional: Add your photo here */}
-          {/* <div className="w-48 h-48 overflow-hidden rounded-full">
-            <Image
-              src="/images/your-photo.jpg" // Replace with your photo path in public/images
-              alt="Deen Karim"
-              width={192}
-              height={192}
-              className="object-cover"
-            />
-          </div> */}
-          <div className="text-lg text-gray-700">
-            <p>
-              I’m Deen Karim, a passionate content director with over 20 years of experience crafting stories that inspire, engage, and connect. I specialize in transforming marketing events for large companies and brands into immersive visual experiences, amplifying thought leadership and fostering meaningful relationships with valuable audiences and stakeholders. My expertise spans storytelling, scripting, video production, and strategic communication. Based in Hamburg and Toronto, I’ve collaborated with notable clients across technology, healthcare, financial services, and sports to deliver impactful content that resonates with audiences. I approach my work with creativity and discipline, always prioritizing positive teamwork to achieve exceptional results.
+    <section className="cinematic-pacing bg-brand-gray-light">
+      <div className="container-wide">
+        <div className="grid-12">
+          {/* Section Header */}
+          <div className="col-span-4 md:col-span-12 mb-16 lg:mb-24 flex flex-col md:flex-row justify-between items-baseline gap-6">
+            <h2 className="text-4xl md:text-6xl font-medium tracking-tight">The Director’s <span className="italic font-serif">Eye.</span></h2>
+            <p className="text-brand-gray-mid text-sm uppercase tracking-widest font-bold">
+              Background & Expertise
             </p>
           </div>
+
+          {/* Left Column - Core Narrative */}
+          <div className="col-span-4 md:col-span-6 lg:col-span-7 pr-4 lg:pr-18">
+            <p className="text-2xl md:text-3xl lg:text-4xl leading-snug text-brand-black mb-12">
+              Deen Karim is a Content Director with over 20 years of experience crafting stories that inspire, engage, and connect.
+            </p>
+            <div className="space-y-6 text-lg md:text-xl text-brand-gray-dark leading-relaxed">
+              <p>
+                Specializing in transforming marketing events for large companies and brands into immersive visual experiences, Deen amplifies thought leadership and fosters meaningful relationships with valuable audiences and stakeholders.
+              </p>
+              <p>
+                Based in Hamburg and Toronto, his collaborations span technology, healthcare, financial services, and sports—delivering impactful content that resonates across industries and cultures.
+              </p>
+            </div>
+          </div>
+
+          {/* Right Column - Skills & Call to Action */}
+          <div className="col-span-4 md:col-span-6 lg:col-span-5 flex flex-col justify-end mt-12 md:mt-0">
+             <div className="border-t border-brand-gray-mid pt-8 space-y-8">
+                <div>
+                   <span className="text-[10px] uppercase tracking-widest font-bold text-brand-gray-mid mb-4 block">Specializations</span>
+                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-4 text-sm font-bold uppercase tracking-widest text-brand-black">
+                      <li>Storytelling</li>
+                      <li>Scripting</li>
+                      <li>Video Production</li>
+                      <li>Strategic Communication</li>
+                      <li>Brand Experience</li>
+                      <li>Creative Direction</li>
+                   </ul>
+                </div>
+
+                <div className="pt-8">
+                   <Link href="/contact" className="btn-primary w-full text-center">
+                      Let’s Collaborate
+                   </Link>
+                </div>
+             </div>
+          </div>
         </div>
-      </div>
-      <div className="text-center mt-8">
-        <a
-          href="/contact" // Replace with your contact page route or external link
-          className="bg-black text-white px-6 py-3 rounded-full font-semibold hover:bg-gray-800 transition duration-300"
-        >
-          Let’s Collaborate
-        </a>
       </div>
     </section>
   );
 }
-
