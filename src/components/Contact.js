@@ -10,10 +10,27 @@ export default function Contact() {
     e.preventDefault();
     setStatus('submitting');
 
-    // Simulate API call for now
-    setTimeout(() => {
-      setStatus('success');
-    }, 1500);
+    const formData = new FormData(e.target);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
+    } catch (error) {
+      console.error('Submission error:', error);
+      setStatus('error');
+    }
   };
 
   return (
@@ -69,28 +86,28 @@ export default function Contact() {
                 <form onSubmit={handleSubmit} className="space-y-10">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div className="relative group">
-                      <input type="text" id="name" required className="w-full bg-transparent border-b border-brand-gray-mid py-3 focus:border-brand-black outline-none transition-all placeholder-transparent peer" placeholder="Name" />
+                      <input type="text" id="name" name="name" required className="w-full bg-transparent border-b border-brand-gray-mid py-3 focus:border-brand-black outline-none transition-all placeholder-transparent peer" placeholder="Name" />
                       <label htmlFor="name" className="absolute left-0 top-3 text-xs uppercase tracking-widest font-bold text-brand-gray-mid transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:-top-6 peer-focus:text-[10px] peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-[10px]">Name</label>
                     </div>
                     <div className="relative group">
-                      <input type="email" id="email" required className="w-full bg-transparent border-b border-brand-gray-mid py-3 focus:border-brand-black outline-none transition-all placeholder-transparent peer" placeholder="Email" />
+                      <input type="email" id="email" name="email" required className="w-full bg-transparent border-b border-brand-gray-mid py-3 focus:border-brand-black outline-none transition-all placeholder-transparent peer" placeholder="Email" />
                       <label htmlFor="email" className="absolute left-0 top-3 text-xs uppercase tracking-widest font-bold text-brand-gray-mid transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:-top-6 peer-focus:text-[10px] peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-[10px]">Email</label>
                     </div>
                   </div>
 
                   <div className="relative group">
-                    <input type="text" id="company" className="w-full bg-transparent border-b border-brand-gray-mid py-3 focus:border-brand-black outline-none transition-all placeholder-transparent peer" placeholder="Company" />
+                    <input type="text" id="company" name="company" className="w-full bg-transparent border-b border-brand-gray-mid py-3 focus:border-brand-black outline-none transition-all placeholder-transparent peer" placeholder="Company" />
                     <label htmlFor="company" className="absolute left-0 top-3 text-xs uppercase tracking-widest font-bold text-brand-gray-mid transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:-top-6 peer-focus:text-[10px] peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-[10px]">Company</label>
                   </div>
 
                   <div className="relative group">
-                    <textarea id="brief" required rows="4" className="w-full bg-transparent border-b border-brand-gray-mid py-3 focus:border-brand-black outline-none transition-all placeholder-transparent peer resize-none" placeholder="Project Brief"></textarea>
+                    <textarea id="brief" name="brief" required rows="4" className="w-full bg-transparent border-b border-brand-gray-mid py-3 focus:border-brand-black outline-none transition-all placeholder-transparent peer resize-none" placeholder="Project Brief"></textarea>
                     <label htmlFor="brief" className="absolute left-0 top-3 text-xs uppercase tracking-widest font-bold text-brand-gray-mid transition-all peer-placeholder-shown:text-sm peer-placeholder-shown:top-3 peer-focus:-top-6 peer-focus:text-[10px] peer-not-placeholder-shown:-top-6 peer-not-placeholder-shown:text-[10px]">What are we building?</label>
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                     <div className="relative group">
-                      <select id="budget" className="w-full bg-transparent border-b border-brand-gray-mid py-3 focus:border-brand-black outline-none transition-all appearance-none">
+                      <select id="budget" name="budget" className="w-full bg-transparent border-b border-brand-gray-mid py-3 focus:border-brand-black outline-none transition-all appearance-none">
                         <option value="">Timeline Preference</option>
                         <option value="immediate">Immediate</option>
                         <option value="1-3-months">1-3 Months</option>
@@ -98,7 +115,7 @@ export default function Contact() {
                       </select>
                     </div>
                     <div className="relative group">
-                      <select id="service" className="w-full bg-transparent border-b border-brand-gray-mid py-3 focus:border-brand-black outline-none transition-all appearance-none">
+                      <select id="service" name="service" className="w-full bg-transparent border-b border-brand-gray-mid py-3 focus:border-brand-black outline-none transition-all appearance-none">
                         <option value="">Core Interest</option>
                         <option value="creative-direction">Creative Direction</option>
                         <option value="content-strategy">Content Strategy</option>

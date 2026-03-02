@@ -91,7 +91,7 @@ export default async function ProjectPage({ params }) {
           </div>
           <div className="col-span-4 md:col-span-8 lg:col-span-7">
             <p className="text-lg md:text-xl leading-relaxed font-serif italic text-brand-black">
-              "{project.result}"
+              &quot;{project.result}&quot;
             </p>
           </div>
         </div>
