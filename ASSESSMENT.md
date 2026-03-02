@@ -25,11 +25,11 @@ Our design approach is inspired by the disciplined minimalism of Pentagram and A
 
 ## 4. Phase-by-Phase Roadmap
 
-### Phase 1: Foundation & High-Fidelity Design (Current)
-- [ ] Establish a strict design system in Tailwind (Typography, Grids, Spacing).
-- [ ] Overhaul the project data structure to support qualitative narratives.
-- [ ] Implement a cinematic Hero section and refined Project Detail templates.
-- [ ] Develop a "Project Brief Intake" form as a precursor to the client portal.
+### Phase 1: Foundation & High-Fidelity Design (Complete)
+- [x] Establish a strict design system in Tailwind (Typography, Grids, Spacing).
+- [x] Overhaul the project data structure to support qualitative narratives.
+- [x] Implement a cinematic Hero section and refined Project Detail templates.
+- [x] Develop a "Project Brief Intake" form as a precursor to the client portal.
 
 ### Phase 2: Media & CMS Integration
 - [ ] Transition project data from a JS file to a Markdown-based CMS.
