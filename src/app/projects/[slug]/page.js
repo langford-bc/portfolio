@@ -1,12 +1,18 @@
 // src/app/projects/[slug]/page.js
-import { projects } from '../../../data/projects';
+import { getAllProjects, getProjectBySlug } from '../../../lib/markdown/parser';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 export default async function ProjectPage({ params }) {
   const { slug } = await params;
-  const project = projects.find((p) => p.slug === slug);
+
+  let project;
+  try {
+    project = getProjectBySlug(slug);
+  } catch {
+    notFound();
+  }
 
   if (!project) {
     notFound();
@@ -85,13 +91,13 @@ export default async function ProjectPage({ params }) {
           {/* Spacer */}
           <div className="col-span-12 h-px bg-brand-gray-light my-12 opacity-50"></div>
 
-          {/* Result / Outcome */}
+          {/* Outcome — RENAMED from `result` to `outcome` to match Markdown frontmatter field */}
           <div className="col-span-4 md:col-span-4 lg:col-span-5">
             <h2 className="text-xs uppercase tracking-widest text-brand-gray-mid mb-8">Outcome & Assessment</h2>
           </div>
           <div className="col-span-4 md:col-span-8 lg:col-span-7">
             <p className="text-lg md:text-xl leading-relaxed font-serif italic text-brand-black">
-              &quot;{project.result}&quot;
+              &quot;{project.outcome}&quot;
             </p>
           </div>
         </div>
@@ -111,6 +117,7 @@ export default async function ProjectPage({ params }) {
 }
 
 export async function generateStaticParams() {
+  const projects = getAllProjects();
   return projects.map((project) => ({
     slug: project.slug,
   }));
