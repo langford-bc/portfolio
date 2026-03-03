@@ -1,4 +1,8 @@
 # AGENTS.md — Portfolio Project
+*Single source of truth for all AI agents working on this project.*
+*Supersedes all other agent briefing files (GEMINI.md, etc.).*
+
+---
 
 ## Who You Are Working With
 
@@ -29,10 +33,10 @@ The design direction is **Pentagram-inspired minimalism**:
 
 ## Current Technical Stack
 
-- **Framework:** Next.js 15 (App Router), React 19
+- **Framework:** Next.js 15.5.12 (App Router), React 19
 - **Styling:** Tailwind CSS 3.4
 - **Routing:** Dynamic routes via `src/app/projects/[slug]/page.js`
-- **Content:** Centralized in `src/data/projects.js`
+- **Content:** Markdown files in `/content/` (Phase 2 and beyond)
 - **Deployment:** Netlify (with `@netlify/plugin-nextjs`)
 - **Node:** v22
 
@@ -41,6 +45,9 @@ The design direction is **Pentagram-inspired minimalism**:
 ## Project Structure
 
 ```
+content/
+  projects/          # One .md file per project case study
+  pages/             # home.md, contact.md for static page content
 src/
   app/
     page.js              # Home page — Hero + Project list
@@ -52,9 +59,12 @@ src/
   components/
     AboutMe.js
     Contact.js
-    HeroSection.js (or inline in page.js)
+    HeroSection.js
   data/
-    projects.js          # All project content lives here
+    projects.js          # Legacy — being migrated to Markdown in Phase 2
+  lib/
+    markdown/
+      parser.js          # Markdown parser utility (gray-matter, remark, remark-html)
 ```
 
 ---
@@ -72,9 +82,11 @@ Foundation work is done:
 - Contact form and Project Brief Intake implemented
 - Netlify deployment confirmed working
 
-### 🔄 Phase 2 — Active (Next)
+### 🔄 Phase 2 — Active
 CMS and media integration:
-- Migrate project content from `src/data/projects.js` to Markdown files
+- Migrate project content from `src/data/projects.js` to Markdown files in `/content/projects/`
+- Migrate home page hero text, About section, and contact page content to `/content/pages/`
+- Implement Netlify Forms on the Project Brief Intake form
 - Use `next/font` for typography and `next/image` for all project assets
 - Add support for video embeds (Vimeo/YouTube) and image galleries
 - Implement smooth page transitions and micro-interactions
@@ -84,6 +96,35 @@ Advanced functionality (do not begin without instruction):
 - GCP backend for asset storage
 - Client project portal
 - Headless CMS (Sanity or Contentful)
+- Netlify CLI integration for environment and deploy management
+
+---
+
+## Development Protocols
+
+These protocols apply to every session without exception:
+
+### Planning
+- Never start coding without a user-approved plan for the current sprint
+- Propose structure or approach first — wait for approval before writing code
+- Break larger phases into small, sequential steps
+- Present one step at a time and confirm before proceeding to the next
+
+### Execution
+- Follow the **Plan → Act → Validate** cycle for every task
+- Validate changes by running `npm run build` before considering any task complete
+- Execute changes in small, logical increments
+- Never commit broken code
+
+### Git
+- Write clear, descriptive commit messages using conventional commit standards:
+  `Feat:`, `Fix:`, `Refactor:`, `Style:`, `Docs:`
+- Group related changes into single, logical commits
+- One PR per phase or feature — do not bundle unrelated changes
+
+### Documentation
+- Keep `ASSESSMENT.md` updated as roadmap phases are completed
+- Update this file if the core technology stack or architectural approach changes
 
 ---
 
@@ -91,16 +132,15 @@ Advanced functionality (do not begin without instruction):
 
 These rules apply to every task unless explicitly overridden:
 
-1. **One PR per phase or feature.** Do not bundle unrelated changes.
-2. **Preserve the design system.** Never modify `tailwind.config.mjs` or `globals.css`
+1. **Preserve the design system.** Never modify `tailwind.config.mjs` or `globals.css`
    without a specific instruction to do so.
-3. **Do not introduce new dependencies** without flagging them first and explaining why
+2. **Do not introduce new dependencies** without flagging them first and explaining why
    they are necessary.
-4. **Deployment is part of done.** A task is not complete until the build passes on Netlify.
+3. **Deployment is part of done.** A task is not complete until the build passes on Netlify.
    Flag any potential deployment risks before submitting a PR.
-5. **No deep-dive copy.** Do not write long-form case study content. Project narratives
+4. **No deep-dive copy.** Do not write long-form case study content. Project narratives
    follow the format: Client → Project Details → Outcome/Assessment.
-6. **Ask before assuming.** If a requirement is ambiguous, ask one focused clarifying
+5. **Ask before assuming.** If a requirement is ambiguous, ask one focused clarifying
    question before proceeding.
 
 ---
@@ -116,9 +156,10 @@ These decisions were made deliberately and are not open for re-interpretation:
 | Color in imagery | Yes — project images may be full color |
 | Narrative format | Client + Project Details + Outcome/Assessment |
 | Narrative depth | Qualitative reflections, not quantitative metrics |
-| CMS approach (Phase 2) | Markdown files in codebase |
+| CMS approach (Phase 2) | Markdown files in codebase — no external CMS tools |
 | Portal backend (Phase 3) | Google Cloud Platform |
 | Scroll behavior | Cinematic — generous whitespace, rewards scrolling |
+| Form submissions | Netlify Forms — no custom backend required |
 
 ---
 
@@ -128,8 +169,8 @@ These decisions were made deliberately and are not open for re-interpretation:
 - **Build command:** `npm run build`
 - **Publish directory:** `.next`
 - **Plugin:** `@netlify/plugin-nextjs`
-- **Known past issue:** Next.js version security block (CVE-2025-55182) — resolved in
-  current `package.json` (v15.5.12). Do not downgrade the Next.js version.
+- **Known past issue:** Next.js version security block (CVE-2025-55182) — resolved.
+  Current version is 15.5.12. Do not downgrade the Next.js version.
 
 ---
 
@@ -142,3 +183,4 @@ and structured. When Jules completes a task:
 - Flag any decisions that were made during execution
 - Note anything the project owner needs to do (e.g., review, merge, test)
 - If a deployment risk exists, say so explicitly before the PR is submitted
+- A task is not complete until the Netlify deployment is confirmed working
