@@ -1,9 +1,10 @@
 // src/components/Projects.js
 import Link from 'next/link';
 import Image from 'next/image';
-import { projects } from '../data/projects';
+import { getAllProjects } from '../lib/markdown/parser';
 
 export default function Projects() {
+  const projects = getAllProjects();
   return (
     <section className="bg-white py-24 md:py-30 lg:py-40">
       <div className="container-wide">

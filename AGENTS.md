@@ -33,7 +33,7 @@ The design direction is **Pentagram-inspired minimalism**:
 
 ## Current Technical Stack
 
-- **Framework:** Next.js 15.5.12 (App Router), React 19
+- **Framework:** Next.js 16.1.6 (App Router), React 19
 - **Styling:** Tailwind CSS 3.4
 - **Routing:** Dynamic routes via `src/app/projects/[slug]/page.js`
 - **Content:** Markdown files in `/content/` (Phase 2 and beyond)
@@ -170,7 +170,7 @@ These decisions were made deliberately and are not open for re-interpretation:
 - **Publish directory:** `.next`
 - **Plugin:** `@netlify/plugin-nextjs`
 - **Known past issue:** Next.js version security block (CVE-2025-55182) — resolved.
-  Current version is 15.5.12. Do not downgrade the Next.js version.
+  Current version is 16.1.6. Do not downgrade the Next.js version.
 
 ---
 
