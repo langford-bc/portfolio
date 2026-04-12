@@ -234,7 +234,13 @@ Maintain a running build log below. Update it as each phase is completed.
 
 | Phase | Description | Status |
 |---|---|---|
-| — | Project not yet started | — |
+| 1 | Scaffold — git init, Next.js 16 + Tailwind v4, colour palette, fonts, assets copied | Complete |
+| 2 | Navigation — sticky nav, hamburger mobile menu | Complete |
+| 3 | Hero section — name, title, sub-line, CTAs, profile photo | Complete |
+| 4 | About + The Core sections — bio, credentials, philosophy, principles | Complete |
+| 5 | Work section — three cards with real images, case studies, outcomes | Complete |
+| 6 | Early Career + Contact — engagement list, email, LinkedIn, signature | Complete |
+| 7 | Polish & responsive pass | Pending |
 
 ---
 

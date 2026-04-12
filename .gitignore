@@ -13,3 +13,18 @@ portfolio/node_modules/
 
 # Claude local settings
 .claude/settings.local.json
+
+# Raw source asset folders (processed copies live in portfolio/public/images)
+cbc-photo/
+ibm-photo/
+perfood-photo/
+profile photo/
+signature/
+
+# Default Next.js boilerplate files
+portfolio/public/file.svg
+portfolio/public/globe.svg
+portfolio/public/next.svg
+portfolio/public/vercel.svg
+portfolio/public/window.svg
+portfolio/README.md
