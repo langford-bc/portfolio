@@ -34,7 +34,7 @@ const cards = [
     body: "The Canadian Broadcasting Corporation is Canada's national public broadcaster — responsible for informing Canadians from the high North to the largest cities on the most consequential stories of the day, 24 hours a day, to the highest editorial standards. Across eleven years and multiple senior roles, I was consistently trusted with the assignments that mattered most. As a Visuals Producer I monitored live combat footage during the opening weeks of the Iraq War. As a Senior Writer I was principal writer on leading news stories. As Social Media Producer, I developed and presented the proposal for CBC's social media news strategy, contributing to its implementation and helping build a Twitter following five times larger than the network's main competitor.",
     outcomes: [
       "Principal writer on defining national and international news events",
-      "Co-produced Our World — the second most-watched weekend current affairs programme on the network",
+      "Co-produced Our World — the second most-watched weekend current affairs program on the network",
       "Contributed to CBC's social media strategy — Twitter following five times larger than main competitor",
       "Lead role in social media coverage of the Vancouver 2010 Winter Olympics",
     ],
