@@ -236,6 +236,7 @@ Do not build these until the job search phase is complete and v1 is stable:
 | 8 | Deployment — Netlify config, GitHub push, repo made public | Complete |
 | 9 | Responsive polish pass | Pending |
 | 10 | Custom domain — DNS propagation in progress | In progress |
+| — | Content tweaks — ongoing as copy is reviewed and refined | Ongoing |
 
 ---
 
