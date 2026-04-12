@@ -1,6 +1,9 @@
 # macOS
 .DS_Store
 
+# Project documents — keep local only
+*.docx
+
 # Next.js
 portfolio/.next/
 portfolio/out/
