@@ -4,18 +4,35 @@
 
 A professional portfolio website for Deen Karim, communications strategist based in Hamburg, Germany. The site supports an active job search. It is a positioning document in web form — not a design showcase.
 
-Live URL (target): deen-karim.netlify.app
+**Live URL:** deen-karim.netlify.app (custom domain in progress — DNS propagating as of April 2026)
+**GitHub:** github.com/langford-bc/portfolio (public)
+**Netlify:** auto-deploys on every push to `main`
 
 ---
 
 ## Technical Stack
 
-- **Framework:** Next.js (App Router)
-- **Styling:** Tailwind CSS
-- **Deployment:** Netlify
-- **Version control:** GitHub
-- **Content:** Static — all content hardcoded from the brief for v1. No CMS.
-- **Dependencies:** Keep minimal. No animation libraries, no heavy UI frameworks beyond Tailwind.
+- **Framework:** Next.js 16 (App Router)
+- **Styling:** Tailwind CSS v4
+- **Fonts:** Playfair Display (headings, serif) + Inter (body, sans)
+- **Deployment:** Netlify — config in `netlify.toml` at repo root
+- **Version control:** GitHub — `main` branch is production
+- **Content:** Static — all content hardcoded. No CMS.
+- **Dependencies:** Minimal. No animation libraries, no heavy UI frameworks beyond Tailwind.
+
+### Netlify Configuration (`netlify.toml`)
+
+```toml
+[build]
+  base = "portfolio"
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+```
+
+The Next.js app lives in the `portfolio/` subdirectory. This config is required — without it Netlify cannot find the app.
 
 ---
 
@@ -36,10 +53,14 @@ Live URL (target): deen-karim.netlify.app
 | Background | `#f8f6f2` — warm off-white |
 | Accent | `#4a6fa5` — muted slate-blue |
 | Surface (alt sections) | `#eeece8` — light warm grey |
+| Muted text | `#6b6b6b` |
+| Border | `#dddbd7` |
 
 ### Typography
 
-Editorial hierarchy. Serif or high-quality sans-serif for headings. Clean body text. Let the type do the work.
+- **Headings:** Playfair Display (serif) — editorial weight and authority
+- **Body:** Inter (sans-serif) — clean, readable
+- **Accents/labels:** Inter, uppercase, wide tracking, slate-blue
 
 ---
 
@@ -49,7 +70,7 @@ Single-page site with smooth scroll navigation. No separate pages in v1.
 
 ### Navigation (sticky)
 
-- Deen Karim (logo/name — scrolls to top)
+- Deen Karim (name/logo — scrolls to top)
 - About
 - Work
 - Contact
@@ -62,125 +83,111 @@ Single-page site with smooth scroll navigation. No separate pages in v1.
 3. The Core
 4. Work (Selected Work)
 5. Early Career (The Foundation)
-6. Contact
+6. Contact + Footer
 
 ---
 
-## Section Content
+## Section Content — Current Live State
 
 ### Section 1 — Hero
 
 - **Name:** Deen Karim
-- **Title line:** Communications Strategist. Editorial Leader. Hamburg.
+- **Location label:** Hamburg, Germany
+- **Title line:** Communications Strategist. Editorial Leader.
 - **Sub-line:** I help companies in competitive and regulated sectors solve complex business challenges through editorial-quality content and brand strategy.
-- **CTAs:** "View My Work" (scrolls to Work) | "Get in Touch" (scrolls to Contact)
-- **Layout:** Full-width, left-aligned text, professional photo right side (portrait)
-- **Photo:** `deen-karim-photo.jpg` — placeholder until supplied
-
----
+- **CTAs:** "View My Work" | "Get in Touch"
+- **Photo:** `deen-karim-photo.jpg` — live
 
 ### Section 2 — About
 
-- **Heading:** About
-- **Body:** Full narrative bio (Columbia MS Journalism, Rotman Executive MBA, 20+ years, IBM/KPMG/Suncor/Norton Rose/Perfood, applied AI competency, based Hamburg since 2018, English full professional, German intermediate)
-- **Credentials row (3 items):**
-  - Columbia University — MS Journalism
-  - Rotman School of Management — Executive MBA
-  - IBM SkillsBuild — AI Fundamentals
-- **Layout:** Two-column desktop (pull quote or photo left, text right), single column mobile
-
----
+- Full narrative bio
+- Pull quote left column, bio right column (desktop)
+- Three credentials: Columbia University MS Journalism | Rotman Executive MBA | IBM SkillsBuild AI Fundamentals
 
 ### Section 3 — The Core
 
-- **Heading:** The Core
 - **Pull quote:** "I diagnose the business challenge first. Then I apply editorial discipline to solve it."
-- **Body:** Philosophy paragraph (most content problems are clarity/trust/alignment problems; journalism standard applied to brand communications)
-- **Three principles (cards/columns):**
-  1. Diagnose first — Understand the business challenge before touching a brief
-  2. Align internally — Employees and executives are brand channels too
-  3. Deliver editorially — Hold the content to the standard you would apply to your own name
-- **Layout:** Full-width, slightly different background (alt surface colour), centred or left-aligned
-
----
+- Two-column body text
+- Three principles: Diagnose first | Align internally | Deliver editorially
 
 ### Section 4 — Work (Selected Work)
 
-Three cards, row on desktop, stacked on mobile. Each card: visual block top, sector label, title, case study paragraph, outcome bullets.
+Three cards, row on desktop, stacked on mobile.
 
-**Card 1 — IBM / /newsrooms**
-- Sector: Technology | Content Marketing
-- Title: Helping IBM reach the startup community
-- Image: `work-ibm.jpg` — placeholder until supplied
-- Case study + 3 outcome bullets (see brief for full text)
-
-**Card 2 — Perfood GmbH**
-- Sector: Digital Health | Regulated Communications
-- Title: Building communications for a prescription digital therapeutic
-- Image: `work-perfood.jpg` — placeholder until supplied (Perfood event photos available in `perfood-photo/`)
-- Case study + 4 outcome bullets (see brief for full text)
-
-**Card 3 — CBC News**
-- Sector: Public Broadcasting | Journalism
-- Title: Eleven years at Canada's national broadcaster
-- Image: `work-cbc.jpg` — placeholder until supplied
-- Case study + 4 outcome bullets (see brief for full text)
-
----
+| Card | Sector | Title | Image |
+|---|---|---|---|
+| IBM | Technology · Content Marketing | Helping IBM to inspire entrepreneurs | `work-ibm.jpg` |
+| Perfood | Digital Health · Regulated Communications | Enhancing brand, product and scientific communication | `work-perfood.jpg` |
+| CBC | Public Broadcasting · Journalism | At the center of national and international news | `work-cbc.jpg` |
 
 ### Section 5 — Early Career (The Foundation)
 
-- **Heading:** The Foundation
-- **Intro:** Narrative paragraph about business fluency before CBC; South Africa 1994 principle
-- **Engagement list (clean timeline):**
-  - South Africa, 1994 — First multi-racial democratic elections. Published in Queen's Alumni Review.
-  - Vickers and Benson — Principal writer, Possibility Network Online (Bank of Montreal)
-  - RBC Technology Ventures — Communications with startup founders for an established financial institution
-  - XPV Capital — Principal coordinator, multi-million dollar VC fund prospectus
-  - Ontario Power Generation — Media training, nuclear emergency preparedness simulation
-  - Baan World Users Group — Communications Manager, newsletter to live online seminars
+- Intro narrative (South Africa 1994 principle)
+- Six engagements listed: South Africa 1994, Vickers and Benson, RBC Technology Ventures, XPV Capital, Ontario Power Generation, Baan World Users Group
+
+### Section 6 — Contact + Footer
+
+- Email: deen.karim@icloud.com
+- LinkedIn: linkedin.com/in/editorial-creative
+- Location: Hamburg, Germany · Available immediately
+- Signature image: `s-karim.png` in footer
 
 ---
 
-### Section 6 — Contact
-
-- **Heading:** Get in Touch
-- **Body:** Based in Hamburg, open to new opportunities in communications strategy, content leadership, brand communications — technology, healthcare, financial services, regulated sectors.
-- **Email:** deen.karim@icloud.com (mailto link)
-- **LinkedIn:** linkedin.com/in/editorial-creative
-- **Location line:** Hamburg, Germany | Available immediately
-- **Layout:** Centred section, no contact form in v1
-
----
-
-## Assets
-
-All assets are placeholders until supplied by Deen. Use consistent light grey placeholder blocks with centred label text.
+## Assets — All Live
 
 | Asset | Filename | Status |
 |---|---|---|
-| Profile photo (Hero + About) | `deen-karim-photo.jpg` | Pending — being organised |
-| Signature image | `s-karim.png` | Pending — will be placed in project directory |
-| IBM work card image | `work-ibm.jpg` | Pending |
-| Perfood work card image | `work-perfood.jpg` | Pending (event photos in `perfood-photo/`) |
-| CBC work card image | `work-cbc.jpg` | Pending |
+| Profile photo (Hero) | `deen-karim-photo.jpg` | Live |
+| Signature | `s-karim.png` | Live |
+| IBM work card | `work-ibm.jpg` | Live |
+| Perfood work card | `work-perfood.jpg` | Live |
+| CBC work card | `work-cbc.jpg` | Live |
+
+All assets are in `portfolio/public/images/`. Raw source folders (cbc-photo/, ibm-photo/, etc.) are gitignored — kept local only.
 
 ---
 
-## What Is Explicitly Deferred to V2
+## Repository Structure
 
-Do not build these in v1:
+```
+portfolio-April-basic/          ← repo root
+├── CLAUDE.md                   ← this file
+├── .gitignore
+├── netlify.toml                ← Netlify build config
+└── portfolio/                  ← Next.js app
+    ├── app/
+    │   ├── components/
+    │   │   ├── Nav.tsx
+    │   │   ├── Hero.tsx
+    │   │   ├── About.tsx
+    │   │   ├── Core.tsx
+    │   │   ├── Work.tsx
+    │   │   ├── EarlyCareer.tsx
+    │   │   └── Contact.tsx
+    │   ├── globals.css
+    │   ├── layout.tsx
+    │   └── page.tsx
+    └── public/
+        └── images/             ← all site images live here
+```
 
-- Expanded case study pages
+---
+
+## What Is Deferred to V2
+
+Do not build these until the job search phase is complete and v1 is stable:
+
+- Expanded case study pages with more detail
 - German language version
 - PDF resume download
 - Blog / writing section
 - Scroll animations or transitions
-- CMS integration
+- CMS integration for content updates without code changes
 
 ---
 
-## Voice & Tone (for any content decisions)
+## Voice & Tone
 
 - Direct and confident — no hedging
 - Specific and grounded — real names, real clients, real outcomes
@@ -201,32 +208,17 @@ Do not build these in v1:
 ### Workflow for Each Phase
 
 1. **Plan** — Agree on what will be built and how before touching code
-2. **Document** — Update CLAUDE.md or relevant notes if the plan changes
-3. **Build** — Implement only what was agreed in the plan for that phase
-4. **Commit** — Commit completed work with a clear, descriptive message
-5. **Review** — Confirm the output matches the plan before moving to the next phase
+2. **Document** — Update CLAUDE.md if the plan changes
+3. **Build** — Implement only what was agreed
+4. **Commit** — Commit completed work with a clear message
+5. **Review** — Confirm output matches plan before moving on
 
 ### Git Conventions
 
-- Initialise a git repository at the start of the project
-- Commit after each meaningful, working unit of work (e.g. scaffold complete, section built, responsive pass done)
-- Commit messages should be plain English, present tense, specific:
-  - `Add hero section with placeholder photo`
-  - `Build work cards — three columns, responsive`
-  - `Wire smooth scroll navigation`
+- Commit after each meaningful, working unit of work
+- Commit messages: plain English, present tense, specific
 - Never commit broken or half-built code
-- Create a GitHub remote repository and push regularly
-
-### Planning Before Each Session
-
-Before starting any build work, state clearly:
-- What will be built in this session
-- What files will be created or modified
-- What the expected outcome is
-
-### Tracking What Has Been Done
-
-Maintain a running build log below. Update it as each phase is completed.
+- Push to `main` triggers automatic Netlify deploy — verify in dashboard
 
 ---
 
@@ -234,16 +226,19 @@ Maintain a running build log below. Update it as each phase is completed.
 
 | Phase | Description | Status |
 |---|---|---|
-| 1 | Scaffold — git init, Next.js 16 + Tailwind v4, colour palette, fonts, assets copied | Complete |
+| 1 | Scaffold — git init, Next.js 16 + Tailwind v4, colour palette, fonts, assets | Complete |
 | 2 | Navigation — sticky nav, hamburger mobile menu | Complete |
 | 3 | Hero section — name, title, sub-line, CTAs, profile photo | Complete |
-| 4 | About + The Core sections — bio, credentials, philosophy, principles | Complete |
+| 4 | About + The Core — bio, credentials, philosophy, principles | Complete |
 | 5 | Work section — three cards with real images, case studies, outcomes | Complete |
 | 6 | Early Career + Contact — engagement list, email, LinkedIn, signature | Complete |
-| 7 | Polish & responsive pass | Pending |
+| 7 | Copy edits — titles, wording changes across Core and Work sections | Complete |
+| 8 | Deployment — Netlify config, GitHub push, repo made public | Complete |
+| 9 | Responsive polish pass | Pending |
+| 10 | Custom domain — DNS propagation in progress | In progress |
 
 ---
 
 ## Source of Truth
 
-Full content, layout notes, and rationale: `Deen_Karim_Portfolio_Brief.docx` in the project root.
+The portfolio brief (`Deen_Karim_Portfolio_Brief.docx`) is kept **locally only** — it is gitignored and does not appear in the repository. All current live content is reflected in this CLAUDE.md.
