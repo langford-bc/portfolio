@@ -3,7 +3,7 @@ import Image from "next/image";
 const cards = [
   {
     sector: "Technology · Content Marketing",
-    title: "Helping IBM reach the startup community",
+    title: "Helping IBM to inspire entrepreneurs",
     image: "/images/work-ibm.jpg",
     imageAlt: "IBM Global Entrepreneur Program materials",
     body: "IBM had a perception problem. Despite having cloud infrastructure and enterprise technology that was genuinely competitive for startups and scale-ups, the company was not part of the conversation in the startup ecosystems it needed to reach. The brand carried associations with legacy enterprise that made it difficult to engage the founders and CTOs who were making platform decisions. At /newsrooms, we were commissioned to develop journalist-quality branded content that would put IBM into the conversations happening in the startup communities of Toronto, the Waterloo tech corridor, Austin, and Tel Aviv — markets where IBM needed credibility and share of voice. The content worked because it answered why, not just what.",
@@ -15,7 +15,7 @@ const cards = [
   },
   {
     sector: "Digital Health · Regulated Communications",
-    title: "Building communications for a prescription digital therapeutic",
+    title: "Enhancing brand, product and scientific communication",
     image: "/images/work-perfood.jpg",
     imageAlt: "Perfood team presentation",
     body: "Perfood was a regulated digital health company developing prescription digital therapeutics — apps formally approved and prescribed by doctors — for conditions including type 2 diabetes and migraine. Operating within Germany's DiGA framework, one of the world's most rigorous regulatory environments for digital health, the company needed communications that could simultaneously satisfy clinical standards, build investor confidence, and establish public credibility in a sector most people had never heard of. As Director of Brand and Corporate Communications, I built the communications function from the ground up across a complex stakeholder landscape: patients, clinicians, investors, regulators, and strategic partners.",
@@ -28,15 +28,15 @@ const cards = [
   },
   {
     sector: "Public Broadcasting · Journalism",
-    title: "Eleven years at Canada's national broadcaster",
+    title: "At the center of national and international news",
     image: "/images/work-cbc.jpg",
     imageAlt: "Deen Karim at CBC News",
-    body: "The Canadian Broadcasting Corporation is Canada's national public broadcaster — responsible for informing Canadians from the Arctic to the largest cities on the most consequential stories of the day, 24 hours a day, to the highest editorial standards. Across eleven years and multiple senior roles, I was consistently trusted with the assignments that mattered most. As a Visuals Producer I monitored live combat footage during the opening weeks of the Iraq War. As a Senior Writer I was principal writer on the Beslan school siege. As Social Media Producer, I developed and presented the proposal for CBC's social media news strategy, contributing to its implementation and helping build a Twitter following five times larger than the network's main competitor.",
+    body: "The Canadian Broadcasting Corporation is Canada's national public broadcaster — responsible for informing Canadians from the high North to the largest cities on the most consequential stories of the day, 24 hours a day, to the highest editorial standards. Across eleven years and multiple senior roles, I was consistently trusted with the assignments that mattered most. As a Visuals Producer I monitored live combat footage during the opening weeks of the Iraq War. As a Senior Writer I was principal writer on leading news stories. As Social Media Producer, I developed and presented the proposal for CBC's social media news strategy, contributing to its implementation and helping build a Twitter following five times larger than the network's main competitor.",
     outcomes: [
-      "Principal writer on defining news events including the Beslan school siege",
+      "Principal writer on defining national and international news events",
       "Co-produced Our World — the second most-watched weekend current affairs programme on the network",
       "Contributed to CBC's social media strategy — Twitter following five times larger than main competitor",
-      "Led social media coverage of the Vancouver 2010 Winter Olympics",
+      "Lead role in social media coverage of the Vancouver 2010 Winter Olympics",
     ],
   },
 ];

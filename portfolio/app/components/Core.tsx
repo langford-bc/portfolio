@@ -40,8 +40,8 @@ export default function Core() {
               and why it should matter to that person.
             </p>
             <p>
-              My approach starts there. I work with business and clinical and
-              executive teams to understand the challenge before I touch a brief.
+              My approach starts there. I work with business and executive teams
+              to understand the challenge before I touch a brief.
               I align internal stakeholders around a coherent narrative. Then I
               build and lead the creative operation that delivers that narrative
               externally — at the quality and scale the sector demands.
