@@ -1,0 +1,15 @@
+# macOS
+.DS_Store
+
+# Next.js
+portfolio/.next/
+portfolio/out/
+portfolio/node_modules/
+
+# Environment
+.env
+.env.local
+.env*.local
+
+# Claude local settings
+.claude/settings.local.json
