@@ -142,6 +142,7 @@ Three cards, row on desktop, stacked on mobile.
 ### Section 6 — Contact + Footer
 
 - Email: hello@deenxwork.com
+- Assignment Portal → /portal (links to the intake form)
 - LinkedIn: linkedin.com/in/editorial-creative
 - Location: Hamburg, Germany · Available immediately
 - Signature image: `s-karim.png` in footer

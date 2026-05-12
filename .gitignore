@@ -20,6 +20,7 @@ portfolio/node_modules/
 # Playwright MCP — auto-generated verification artifacts
 .playwright-mcp/
 *-verify.png
+*-recheck.png
 
 # Raw source asset folders (processed copies live in portfolio/public/images)
 cbc-photo/
