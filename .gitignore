@@ -17,6 +17,10 @@ portfolio/node_modules/
 # Claude local settings
 .claude/settings.local.json
 
+# Playwright MCP — auto-generated verification artifacts
+.playwright-mcp/
+*-verify.png
+
 # Raw source asset folders (processed copies live in portfolio/public/images)
 cbc-photo/
 ibm-photo/

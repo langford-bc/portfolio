@@ -1,0 +1,35 @@
+Biggest risks of failure
+                                                                                                                                                        
+  1. The value exchange is undefined
+  "Results delivered via secure channel" is the weakest moment in an otherwise sharp portfolio. A potential client or employer reads: drop your         
+  confidential document here and... wait for something from someone, somehow. What do they get? When? Via what? This framing will cause abandonment before a single file is uploaded.
+
+
+Motivation and value proposition - I wanted to have an assignment portal. The UI was scoped just technically. The business case was to have a dedicated space where potential clients can upload documents for the following - editing and review, story development and content creation. The UI presently does not support any of this editorial grounding to tell a person - "use this for this reason." So I think this should be the foundation - the why and what and integrated with the branding of the page - this way the "tool" makes sense and has a value proposition.
+                                                                                                                                                        
+  2. The feature doesn't match the site's primary job       
+  The portfolio supports a job search. Hiring managers do not upload briefs. The portal is a freelance/consulting intake tool. Building it now, during the job search phase, adds maintenance weight and complexity to a site that is performing well as a static credential document. It may dilute the signal.
+
+This is an excellent point. Originally, I was thinking of having a link in my email signature to the upload portal. This way, if a client is interested after receiving an email from me and they have a pressing editing, writing or review project - they can simply upload the file, provide details about what they would like to have done and an email address or contact for the recipient. 
+                                                                                                                                                        
+  3. The Cloud Function URL is hardcoded and public         
+  CLOUD_KEYMAKER_URL is baked into the frontend bundle — visible to anyone who reads your page source. Any person can hit that endpoint directly, bypassing your portfolio entirely, and trigger signed URL generation at will. Without rate limiting on the Cloud Function, this is an open cost vector.
+
+Thank you for identifying this risk. I lack the experience and relied on the developer to guide how this should be set up. I would like to avoid these risks and develop a solution that doesn't create these challenges.
+                                                                                                                                                        
+  4. CORS is wildcard                                                                                                                                   
+  Your CORS_REF.md notes origins: ["*"] is set for the development sprint. If that ships to production unchanged, any origin can PUT to your GCS bucket via a valid signed URL. This needs to lock to your Netlify domain before going live.      
+
+Again, my lack of knowledge allowed this to slip through. Please help me to address this. One thing I did was added the Playwright MCP to your configuration so we can do valid testing for any potential issues with security, etc.                                                             
+                                                            
+  5. No file validation                                                                                                                                 
+The component accepts any file type and any size. A confused visitor — or a malicious one — can upload a 500MB video or an executable. This needs accept attribute filtering and client-side size checking at minimum. 
+
+I was unaware of this - again - my lack of knowledge and it was why I wanted to have this documentation to share with you.                                                                                 
+   
+  6. Trust problem                                                                                                                                      
+  Asking a potential client to upload a confidential strategic brief to a personal portfolio via an anonymous GCS bucket is a significant trust ask.
+  There's no privacy statement, no indication of how documents are handled, no indication of what the "secure channel" is. B2B clients won't do this    
+  without those answers.
+
+I agree. And this is important as we are in Germany and there are standards set by GDPR and the EU AI Act that must be adhered to. We may need to completely re-configure the project on Google Cloud to meet all of these requirements.
