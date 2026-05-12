@@ -21,10 +21,10 @@ export default function Contact() {
           <div className="space-y-4 mb-12">
             <div>
               <a
-                href="mailto:deen.karim@icloud.com"
+                href="mailto:hello@deenxwork.com"
                 className="text-lg font-medium text-[#1a1a1a] hover:text-[#4a6fa5] transition-colors"
               >
-                deen.karim@icloud.com
+                hello@deenxwork.com
               </a>
             </div>
             <div>
