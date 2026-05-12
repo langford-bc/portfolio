@@ -29,6 +29,14 @@ export default function Contact() {
             </div>
             <div>
               <a
+                href="/portal"
+                className="text-base text-[#4a6fa5] hover:text-[#3a5a8f] transition-colors font-medium"
+              >
+                Assignment Portal →
+              </a>
+            </div>
+            <div>
+              <a
                 href="https://linkedin.com/in/editorial-creative"
                 target="_blank"
                 rel="noopener noreferrer"
