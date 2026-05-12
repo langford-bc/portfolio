@@ -35,6 +35,19 @@ A professional portfolio website for Deen Karim, communications strategist based
 
 The Next.js app lives in the `portfolio/` subdirectory. This config is required — without it Netlify cannot find the app.
 
+### Routing Model
+
+The site uses Next.js App Router file-based routing. Every folder inside `app/` becomes a URL path automatically:
+
+```
+app/
+├── page.tsx          → deenxwork.com/
+└── portal/
+    └── page.tsx      → deenxwork.com/portal
+```
+
+The portal is **not** a subdomain — it is a standard Next.js route within the same app. No additional DNS configuration or separate Netlify site is required. One codebase, one deploy, one set of environment variables. The portal feels decoupled because it has its own header, footer, and no main nav — not because it lives on separate infrastructure.
+
 ---
 
 ## Design Direction
