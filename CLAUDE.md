@@ -4,7 +4,7 @@
 
 A professional portfolio website for Deen Karim, communications strategist based in Hamburg, Germany. The site supports an active job search. It is a positioning document in web form — not a design showcase.
 
-**Live URL:** deen-karim.netlify.app (custom domain in progress — DNS propagating as of April 2026)
+**Live URL:** deenxwork.com (custom domain live)
 **GitHub:** github.com/langford-bc/portfolio (public)
 **Netlify:** auto-deploys on every push to `main`
 
@@ -19,6 +19,7 @@ A professional portfolio website for Deen Karim, communications strategist based
 - **Version control:** GitHub — `main` branch is production
 - **Content:** Static — all content hardcoded. No CMS.
 - **Dependencies:** Minimal. No animation libraries, no heavy UI frameworks beyond Tailwind.
+- **Email:** Resend (eu-west-1, Ireland) — domain verified for deenxwork.com
 
 ### Netlify Configuration (`netlify.toml`)
 
@@ -127,7 +128,7 @@ Three cards, row on desktop, stacked on mobile.
 
 ### Section 6 — Contact + Footer
 
-- Email: deen.karim@icloud.com
+- Email: hello@deenxwork.com
 - LinkedIn: linkedin.com/in/editorial-creative
 - Location: Hamburg, Germany · Available immediately
 - Signature image: `s-karim.png` in footer
@@ -171,6 +172,22 @@ portfolio-April-basic/          ← repo root
     └── public/
         └── images/             ← all site images live here
 ```
+
+---
+
+### Assignment Portal — `/portal`
+
+A standalone editorial intake page, not part of the main homepage scroll. Accessed via email signature link.
+
+- **Route:** `/portal` (noindex — not surfaced in search)
+- **Purpose:** Potential clients submit project briefs for editing, content review, story development, or strategic communications work
+- **Fields:** Name, email, service type, project brief (textarea), optional file attachment
+- **File validation:** PDF, DOC, DOCX, TXT only — max 5MB
+- **Email flow:** Notification to `editorial@deenxwork.com` (with attachment); confirmation to submitter
+- **Server Action:** `app/actions/submitPortal.ts`
+- **Form component:** `app/portal/PortalForm.tsx` (Client Component, `useActionState`)
+- **GDPR:** Consent checkbox required; inline notice; data processed under Article 6(1)(b); no persistent storage
+- **Environment variable:** `RESEND_API_KEY` — set as secret in Netlify; stored locally in `portfolio/.env.local` (gitignored)
 
 ---
 
@@ -235,7 +252,8 @@ Do not build these until the job search phase is complete and v1 is stable:
 | 7 | Copy edits — titles, wording changes across Core and Work sections | Complete |
 | 8 | Deployment — Netlify config, GitHub push, repo made public | Complete |
 | 9 | Responsive polish pass | Pending |
-| 10 | Custom domain — DNS propagation in progress | In progress |
+| 10 | Custom domain — deenxwork.com | Complete |
+| 11 | Assignment Portal — /portal, Resend email, GDPR consent, file upload | Complete |
 | — | Content tweaks — ongoing as copy is reviewed and refined | Ongoing |
 
 ---
